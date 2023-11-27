@@ -57,7 +57,7 @@ namespace ConsoleApp1.Classes
                 }
                 else
                 {
-                    Console.WriteLine("Название книги не может быть пустым!"); // Вывод ошибки в консоль
+                    Console.WriteLine("Автор должен быть указан!"); // Вывод ошибки в консоль
                 }
             }
         }
@@ -115,13 +115,14 @@ namespace ConsoleApp1.Classes
             }
         }
 
-        public BookObject(int id, string name, string author, int pages, int year)
+        public BookObject(int id, string name, string author, string publisher, int pages, int year)
         {
-            this.id = id;
-            this.name = name;
-            this.author = author;
-            this.pages = pages;
-            this.year = year;
+            Id = id;
+            Name = name;
+            Author = author;
+            Publisher = publisher;
+            Pages = pages;
+            Year = year;
         }
     }
 }
