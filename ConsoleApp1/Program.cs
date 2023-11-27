@@ -34,6 +34,9 @@ namespace ConsoleApp1
             // Задание #15
             JewelProduct jewelProduct = new JewelProduct(0, "Кольцо", "Золотое кольцо", "Кольца", "RingBrand", 3.3, 4.9, "https://example.com/image.png", 100000);
 
+            // Задание #27
+            CarClient carClient = new CarClient(0, "Иванов", "Иван", "Иванович", 1000, 100000, "79001234567", "email@example.com", new List<string> {"A", "B", "C"});
+
             Console.ReadKey();
         }
     }

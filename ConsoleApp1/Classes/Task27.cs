@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 // Задание #14
 namespace ConsoleApp1.Classes
 {
-    internal class Client
+    internal class CarClient
     {
         private int id;
         public int Id
@@ -156,7 +156,20 @@ namespace ConsoleApp1.Classes
             }
         }
 
-        public Client(int id, string lastName, string firstName, string patronymic, int passportSeries, int passportNumber, string phone, string email)
+        private List<string> categories;
+        public List<string> Categories
+        {
+            get
+            {
+                return categories; // Возвращаем значение свойства
+            }
+            set
+            {
+                categories = value;
+            }
+        }
+
+        public CarClient(int id, string lastName, string firstName, string patronymic, int passportSeries, int passportNumber, string phone, string email, List<string> categories)
         {
             Id = id;
             LastName = lastName;
@@ -166,6 +179,7 @@ namespace ConsoleApp1.Classes
             PassportNumber = passportNumber;
             Phone = phone;
             Email = email;
+            Categories = categories;
         }
     }
 }
