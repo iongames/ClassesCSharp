@@ -103,11 +103,6 @@ namespace ConsoleApp1.Classes
         }
 
         private double price;
-
-        public Product()
-        {
-        }
-
         public double Price
         {
             get

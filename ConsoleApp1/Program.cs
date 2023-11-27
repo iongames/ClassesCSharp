@@ -20,6 +20,9 @@ namespace ConsoleApp1
             // Задание #19
             Client client = new Client(0, "Иванов", "Иван", "Иванович", 1000, 100000, "79001234567", "email@example.com");
 
+            // Задание #27
+            CarClient carClient = new CarClient(0, "Иванов", "Иван", "Иванович", 1000, 100000, "79001234567", "email@example.com", new List<string> {"A", "B", "C"});
+
             Console.ReadKey();
         }
     }

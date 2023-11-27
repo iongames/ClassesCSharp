@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Task27.cs" />
     <Compile Include="Classes\Task19.cs" />
     <Compile Include="Classes\Task14.cs" />
     <Compile Include="Classes\Task10.cs" />
