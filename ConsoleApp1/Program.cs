@@ -23,10 +23,18 @@ namespace ConsoleApp1
             );
 
             // Задание #10
-            BookObject bookObject = new BookObject(0, "Книга", "Иванов И. И.", 100, 2023);
+            BookObject bookObject = new BookObject(0, "Книга", "Иванов И. И.", "Издатель", 100, 2023);
+
+            // Задание #14
+            Product product = new Product(0, "Товар", "Производитель", "Модель", "Категория", 9990.00);
+
+            // Задание #19
+            Client client = new Client(0, "Иванов", "Иван", "Иванович", 1000, 100000, "79001234567", "email@example.com");
 
             // Задание #15
             JewelProduct jewelProduct = new JewelProduct(0, "Кольцо", "Золотое кольцо", "Кольца", "RingBrand", 3.3, 4.9, "https://example.com/image.png", 100000);
+
+            Console.ReadKey();
         }
     }
 }
