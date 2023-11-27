@@ -8,7 +8,7 @@ namespace ConsoleApp1.Classes
 {
     //15.	Разработайте класс для работы с украшениями в информационной системе «Ювелирный салон».
     //Реализуйте проверку правильности вводимых пользователем значений при добавлении нового товара.
-    internal class Task15
+    internal class JewelProduct
     {
         private int id; // Идентификатор
         public int Id
@@ -176,17 +176,17 @@ namespace ConsoleApp1.Classes
             }
         }
 
-        public Task15(int id, string name, string description, string category, string brand, double weight, double rating, string imageLink, double price)
+        public JewelProduct(int id, string name, string description, string category, string brand, double weight, double rating, string imageLink, double price)
         {
-            this.id = id;
-            this.name = name;
-            this.description = description;
-            this.category = category;
-            this.brand = brand;
-            this.weight = weight;
-            this.rating = rating;
-            this.imageLink = imageLink;
-            this.price = price;
+            Id = id;
+            Name = name;
+            Description = description;
+            Category = category;
+            Brand = brand;
+            Weight = weight;
+            Rating = rating;
+            ImageLink = imageLink;
+            Price = price;
         }
     }
 }

@@ -110,19 +110,6 @@ namespace ConsoleApp1.Classes
             }
         }
 
-        private DateTime dateEnd; // Дата завершения тура
-        public DateTime DateEnd
-        {
-            get
-            {
-                return dateEnd; // Возвращаем значение свойства
-            }
-            set
-            {
-                dateEnd = value; // Устанавливаем новое значение свойства
-            }
-        }
-
         private double price; // Цена
         public double Price
         {
@@ -143,16 +130,15 @@ namespace ConsoleApp1.Classes
             }
         }
 
-        public Tour(int id, string name, string city, List<string> additionals, int days, DateTime dateStart, DateTime dateEnd, double price)
+        public Tour(int id, string name, string city, List<string> additionals, int days, DateTime dateStart, double price)
         {
-            this.id = id;
-            this.name = name;
-            this.city = city;
-            this.additionals = additionals;
-            this.days = days;
-            this.dateStart = dateStart;
-            this.dateEnd = dateEnd;
-            this.price = price;
+            Id = id;
+            Name = name;
+            City = city;
+            Additionals = additionals;
+            Days = days;
+            DateStart = dateStart;
+            Price = price;
         }
     }
 }
