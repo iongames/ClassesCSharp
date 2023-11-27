@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Task10.cs" />
+    <Compile Include="Classes\Task15.cs" />
+    <Compile Include="Classes\Task9.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

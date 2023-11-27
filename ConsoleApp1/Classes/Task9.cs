@@ -1,6 +1,9 @@
 ﻿using System;
-
-
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace ConsoleApp1.Classes
 {
@@ -22,7 +25,7 @@ namespace ConsoleApp1.Classes
         }
 
         private string name; // Название
-        public string name
+        public string Name
         {
             get
             {
@@ -30,12 +33,18 @@ namespace ConsoleApp1.Classes
             }
             set
             {
-                name = value; // Устанавливаем новое значение свойства
+                if (!string.IsNullOrWhiteSpace(value))
+                {
+                    name = value; // Устанавливаем новое значение свойства
+                } else
+                {
+                    Console.WriteLine("Название тура не может быть пустым!"); // Вывод ошибки в консоль
+                }
             }
         }
 
         private string city; // Город
-        public string city
+        public string City
         {
             get
             {
@@ -43,12 +52,19 @@ namespace ConsoleApp1.Classes
             }
             set
             {
-                city = value; // Устанавливаем новое значение свойства
+                if (!string.IsNullOrWhiteSpace(value))
+                {
+                    city = value; // Устанавливаем новое значение свойства
+                }
+                else
+                {
+                    Console.WriteLine("Город не может быть пустым!"); // Вывод ошибки в консоль
+                }
             }
         }
 
         private List<string> additionals; // Дополнения
-        public List<string> additionals
+        public List<string> Additionals
         {
             get
             {
@@ -61,7 +77,7 @@ namespace ConsoleApp1.Classes
         }
 
         private int days; // Кол-во дней
-        public int days
+        public int Days
         {
             get
             {
@@ -69,12 +85,20 @@ namespace ConsoleApp1.Classes
             }
             set
             {
-                days = value; // Устанавливаем новое значение свойства
+                if (value > 0)
+                {
+                    days = value; // Устанавливаем новое значение свойства
+                }
+                else
+                {
+                    Console.WriteLine("Количество дней должно быть больше 0!"); // Вывод ошибки в консоль
+                }
+               
             }
         }
 
         private DateTime dateStart; // Дата начала тура
-        public DateTime dateStart
+        public DateTime DateStart
         {
             get
             {
@@ -87,7 +111,7 @@ namespace ConsoleApp1.Classes
         }
 
         private DateTime dateEnd; // Дата завершения тура
-        public DateTime dateEnd
+        public DateTime DateEnd
         {
             get
             {
@@ -99,8 +123,8 @@ namespace ConsoleApp1.Classes
             }
         }
 
-        private double price; // Дополнения
-        public double price
+        private double price; // Цена
+        public double Price
         {
             get
             {
@@ -108,18 +132,27 @@ namespace ConsoleApp1.Classes
             }
             set
             {
-                price = value; // Устанавливаем новое значение свойства
+                if (value > 0)
+                {
+                    price = value; // Устанавливаем новое значение свойства
+                }
+                else
+                {
+                    Console.WriteLine("Цена должна быть больше 0!"); // Вывод ошибки в консоль
+                }
             }
         }
 
-
-        public Tour(int id, string name, string city,List<string> additionals, int days, DateTime dateStart, DateTime dateEnd, double price)
+        public Tour(int id, string name, string city, List<string> additionals, int days, DateTime dateStart, DateTime dateEnd, double price)
         {
             this.id = id;
             this.name = name;
-            this.author = author;
-            this.pages = pages;
-            this.year = year;
+            this.city = city;
+            this.additionals = additionals;
+            this.days = days;
+            this.dateStart = dateStart;
+            this.dateEnd = dateEnd;
+            this.price = price;
         }
     }
 }
